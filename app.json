@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "BOUND",
+    "slug": "bound",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/bound-logo.png",
+    "scheme": "bound",
+    "userInterfaceStyle": "automatic",
+    "backgroundColor": "#07080B",
+    "primaryColor": "#C8F751",
+    "ios": {
+      "bundleIdentifier": "app.bound.music",
+      "supportsTablet": true
+    },
+    "android": {
+      "package": "app.bound.music",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#07080B",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "single",
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      [
+        "expo-router",
+        {
+          "headers": {
+            "Cross-Origin-Embedder-Policy": "credentialless",
+            "Cross-Origin-Opener-Policy": "same-origin"
+          }
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#07080B",
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 120,
+          "dark": {
+            "backgroundColor": "#07080B",
+            "image": "./assets/images/splash-icon.png"
+          }
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": false,
+          "recordAudioAndroid": false,
+          "enableBackgroundPlayback": true
+        }
+      ],
+      "expo-sqlite",
+      "expo-secure-store",
+      "expo-sharing"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
